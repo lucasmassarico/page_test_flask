@@ -1,0 +1,3 @@
+definir o auto request da rota:
+
+browser-sync start --proxy "127.0.0.1:5000" --files "**/*" --reload-delay 200

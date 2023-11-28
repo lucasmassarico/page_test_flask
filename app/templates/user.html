@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<a href="{{url_for("users")}}" class="btn btn-lg btn-info mt-2 sticky-top">
+    <i class="fa-solid fa-arrow-left-long"></i>
+</a>
+
+<div class="mt-5 border">
+    
+    <table class="table table-striped mt-3 text-left">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th class="col-sm-3">ID</th>
+                <th>Nome</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="col-sm-3">
+                    <div>
+                        <input class="form-control" type="text" value="{{user.id}}" disabled readonly>
+                    </div>
+                </td>
+                <td>
+                    <input type="text" class="form-control" value="{{user.name}}" placeholder="Nome">
+                </td>
+                <td>
+                    <input type="email" class="form-control" value="{{user.email}}" placeholder="Email">
+                </td>
+                <td>
+                    <input type="password" class="form-control" placeholder="Nova senha">
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+{% endblock %}
